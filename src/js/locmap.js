@@ -63,7 +63,7 @@ export function initLocMap(wrap) {
   }
   const ALL = D.landmarks.map((l) => l.ll);
   // the text column covers the left 40 % of the map on desktop: keep the content in the visible part
-  const pad = (t) => (window.matchMedia('(max-width: 991px), (orientation: portrait)').matches ? { padding: [t, t] } : { paddingTopLeft: [Math.round(wrap.clientWidth * 0.42), t], paddingBottomRight: [t, t] });
+  const pad = (t) => (window.matchMedia('(max-width: 991px), (orientation: portrait)').matches ? { paddingTopLeft: [t, t + 72], paddingBottomRight: [t + 24, t] } : { paddingTopLeft: [Math.round(wrap.clientWidth * 0.42), t], paddingBottomRight: [t, t] });
   const VIEWS = {
     site: (a) => { const b = L.latLng(D.site).toBounds(1400); a ? map.flyToBounds(b, { ...pad(40), duration: 1.4 }) : map.fitBounds(b, pad(40)); },
     maitama: (a) => { const b = L.latLngBounds(ALL); a ? map.flyToBounds(b, { ...pad(48), duration: 1.6 }) : map.fitBounds(b, pad(48)); },

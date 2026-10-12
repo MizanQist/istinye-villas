@@ -62,3 +62,6 @@
   .locmap .leaflet-control-zoom { margin: 0 16px 56px 0; }
   .location__credit { bottom: 20px; right: 16px; }
 }
+
+/* Phone: numbered pins read against the list; only the chosen pin and the site carry a label. */
+@media (max-width: 991px), (orientation: portrait) { .lm-pin:not(.lm-pin--site):not(.on):not(.hi) b { display: none; } }
