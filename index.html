@@ -242,6 +242,58 @@
         <p class="locmap__foot" data-reveal="ctn">Distances are by road from the site, routed on OpenStreetMap; drive times are approximate and off-peak. The site is shown at district level until the surveyed pin is supplied.</p>
       </div>
     </section>
+
+    <section class="plan" id="masterplan" data-bg="light" data-index="06" aria-labelledby="plan-title">
+      <div class="plan__head">
+        <div class="plan__narrow">
+          <p class="plan__eyebrow t-label" data-reveal="p">The master plan</p>
+          <h2 class="plan__title" id="plan-title"><span class="plan__line" data-reveal="p">Twenty-eight villas,</span><span class="plan__line" data-reveal="p">one quiet loop.</span></h2>
+        </div>
+        <i class="plan__rule" data-reveal="line" aria-hidden="true"></i>
+        <div class="plan__wide">
+          <p class="plan__body" data-reveal="p">Plot 1467 is a fan of 47,978 square metres, entered from the west through a gate house and a roundabout. One loop road serves every villa; seven of every ten square metres stay unbuilt, with a walkway ring, a bicycle lane and lawns between the houses. Select a plot to see its area and where it sits.</p>
+          <ul class="stats plan__stats" aria-label="Site analysis">
+            <li class="stat"><b class="stat__num" data-count="29.3" data-format="dec" data-suffix="%">29.3%</b><span class="stat__label t-label">Built footprint</span></li>
+            <li class="stat"><b class="stat__num" data-count="4101" data-format="comma">4,101<small>sqm</small></b><span class="stat__label t-label">Green area</span></li>
+            <li class="stat"><b class="stat__num" data-count="2427" data-format="comma">2,427<small>sqm</small></b><span class="stat__label t-label">Bicycle lane</span></li>
+            <li class="stat"><b class="stat__num" data-count="1404" data-format="comma">1,404<small>sqm</small></b><span class="stat__label t-label">Walkway</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="plan__hint t-label" data-plan-hint aria-hidden="true"><span>Drag to see more</span><i></i></p>
+      <div class="plan__scroller" data-plan-scroller>
+        <div class="plan__stage" data-plan-stage>
+          <picture class="plan__sheet">
+            <source type="image/avif" srcset="/assets/renders/plan-1000.avif 1000w, /assets/renders/plan-1600.avif 1600w, /assets/renders/plan-2400.avif 2400w" sizes="(max-width: 991px) 190vw, 90vw">
+            <source type="image/webp" srcset="/assets/renders/plan-1000.webp 1000w, /assets/renders/plan-1600.webp 1600w, /assets/renders/plan-2400.webp 2400w" sizes="(max-width: 991px) 190vw, 90vw">
+            <img src="/assets/renders/plan-1600.jpg" srcset="/assets/renders/plan-1000.jpg 1000w, /assets/renders/plan-1600.jpg 1600w, /assets/renders/plan-2400.jpg 2400w" sizes="(max-width: 991px) 190vw, 90vw" width="2400" height="1564" loading="lazy" decoding="async" alt="The master plan of Istinye Villas: a fan-shaped site entered from the west through a gate house and a roundabout, one loop road serving twenty-eight villa plots, a worship centre beside the entrance and lawns at the centre.">
+          </picture>
+          <svg class="plan__overlay" viewBox="0 0 3390 2209" aria-hidden="true" data-plan-overlay></svg>
+          <ol class="plan__pins" data-plan-pins aria-label="Plots on the master plan"></ol>
+          <div class="plan__veil" aria-hidden="true"></div>
+          <aside class="plan__card" id="plan-card" data-plan-card hidden>
+            <button type="button" class="plan__card-close t-nav-sm" data-plan-close>Close</button>
+            <p class="plan__card-label t-nav-sm" data-card-label></p>
+            <p class="plan__card-area" data-card-area></p>
+            <p class="plan__card-where" data-card-where></p>
+            <p class="plan__card-status t-nav-sm" data-card-status></p>
+            <a class="plan__card-link t-nav-sm" data-card-link href="https://wa.me/234" target="_blank" rel="noopener">Ask about this plot</a>
+          </aside>
+          <i class="plan__leader" data-plan-leader data-reveal="line" aria-hidden="true"><p class="plan__callout-label t-label" data-reveal="ctn">Typical plot, 1,005 sqm</p></i>
+        </div>
+      </div>
+      <div class="plan__foot">
+        <ul class="plan__legend t-label" aria-label="Key to the plan">
+          <li><i class="plan__swatch" style="--c: #bcbdb8" aria-hidden="true"></i>Villa plot</li>
+          <li><i class="plan__swatch" style="--c: #a9b864" aria-hidden="true"></i>Lawn</li>
+          <li><i class="plan__swatch" style="--c: #a2e1ea" aria-hidden="true"></i>Pool</li>
+          <li><i class="plan__swatch" style="--c: #f0b39b" aria-hidden="true"></i>Walkway ring</li>
+          <li><i class="plan__swatch" style="--c: #5a3c22" aria-hidden="true"></i>Bicycle lane</li>
+        </ul>
+        <p class="plan__note">Plot 1 is set aside for a worship centre. Plots 2 and 22 are to be confirmed with Leventra.</p>
+      </div>
+      <p class="plan__meta t-label">Leventra / Istinye Villas / Abuja</p>
+    </section>
   </main>
 
   <aside class="chrome" aria-hidden="true">
