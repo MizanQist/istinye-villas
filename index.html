@@ -251,7 +251,7 @@
         </div>
         <i class="plan__rule" data-reveal="line" aria-hidden="true"></i>
         <div class="plan__wide">
-          <p class="plan__body" data-reveal="p">Plot 1467 is a fan of 47,978 square metres, entered from the west through a gate house and a roundabout. One loop road serves every villa; seven of every ten square metres stay unbuilt, with a walkway ring, a bicycle lane and lawns between the houses. Select a plot to see its area and where it sits.</p>
+          <p class="plan__body" data-reveal="p">Plot 1467 is a fan of 47,978 square metres, entered from the west through a gate house and a roundabout. One loop road serves every villa; seven of every ten square metres stay unbuilt, with a walkway ring, a bicycle lane and lawns between the houses. Turn the model, move the sun, and select a villa to see its plot.</p>
           <ul class="stats plan__stats" aria-label="Site analysis">
             <li class="stat"><b class="stat__num" data-count="29.3" data-format="dec" data-suffix="%">29.3%</b><span class="stat__label t-label">Built footprint</span></li>
             <li class="stat"><b class="stat__num" data-count="4101" data-format="comma">4,101<small>sqm</small></b><span class="stat__label t-label">Green area</span></li>
@@ -260,17 +260,21 @@
           </ul>
         </div>
       </div>
-      <p class="plan__hint t-label" data-plan-hint aria-hidden="true"><span>Drag to see more</span><i></i></p>
+      <div class="plan__ctl">
+        <div class="plan__seg" role="group" aria-label="View"><button type="button" data-plan-view="model" aria-pressed="true">Model</button><button type="button" data-plan-view="plan" aria-pressed="false">Plan</button></div>
+        <div class="plan__seg" role="group" aria-label="Sun"><button type="button" data-plan-sun="morning" aria-pressed="false">Morning</button><button type="button" data-plan-sun="midday" aria-pressed="true">Midday</button><button type="button" data-plan-sun="evening" aria-pressed="false">Evening</button></div>
+      </div>
+      <p class="plan__hint t-label" data-plan-hint><span>Drag to turn the model, select a villa</span><i aria-hidden="true"></i></p>
       <div class="plan__scroller" data-plan-scroller>
         <div class="plan__stage" data-plan-stage>
           <picture class="plan__sheet">
-            <source type="image/avif" srcset="/assets/renders/plan-1000.avif 1000w, /assets/renders/plan-1600.avif 1600w, /assets/renders/plan-2400.avif 2400w" sizes="(max-width: 991px) 190vw, 90vw">
-            <source type="image/webp" srcset="/assets/renders/plan-1000.webp 1000w, /assets/renders/plan-1600.webp 1600w, /assets/renders/plan-2400.webp 2400w" sizes="(max-width: 991px) 190vw, 90vw">
-            <img src="/assets/renders/plan-1600.jpg" srcset="/assets/renders/plan-1000.jpg 1000w, /assets/renders/plan-1600.jpg 1600w, /assets/renders/plan-2400.jpg 2400w" sizes="(max-width: 991px) 190vw, 90vw" width="2400" height="1564" loading="lazy" decoding="async" alt="The master plan of Istinye Villas: a fan-shaped site entered from the west through a gate house and a roundabout, one loop road serving twenty-eight villa plots, a worship centre beside the entrance and lawns at the centre.">
+            <source type="image/avif" srcset="/assets/renders/plan-1000.avif 1000w, /assets/renders/plan-1600.avif 1600w, /assets/renders/plan-2400.avif 2400w" sizes="(max-width: 991px) 100vw, 90vw">
+            <source type="image/webp" srcset="/assets/renders/plan-1000.webp 1000w, /assets/renders/plan-1600.webp 1600w, /assets/renders/plan-2400.webp 2400w" sizes="(max-width: 991px) 100vw, 90vw">
+            <img src="/assets/renders/plan-1600.jpg" srcset="/assets/renders/plan-1000.jpg 1000w, /assets/renders/plan-1600.jpg 1600w, /assets/renders/plan-2400.jpg 2400w" sizes="(max-width: 991px) 100vw, 90vw" width="2400" height="1564" loading="lazy" decoding="async" alt="The master plan of Istinye Villas: a fan-shaped site entered from the west through a gate house and a roundabout, one loop road serving twenty-eight villa plots, a worship centre beside the entrance and lawns at the centre.">
           </picture>
-          <svg class="plan__overlay" viewBox="0 0 3390 2209" aria-hidden="true" data-plan-overlay></svg>
+          <div class="plan__canvas" data-plan-canvas aria-label="A model of the estate. Drag to turn it; select a villa to see its plot." role="img"></div>
           <ol class="plan__pins" data-plan-pins aria-label="Plots on the master plan"></ol>
-          <div class="plan__veil" aria-hidden="true"></div>
+          <button type="button" class="plan__lock t-label" data-plan-lock aria-pressed="false">Touch to explore</button>
           <aside class="plan__card" id="plan-card" data-plan-card hidden>
             <button type="button" class="plan__card-close t-nav-sm" data-plan-close>Close</button>
             <p class="plan__card-label t-nav-sm" data-card-label></p>
@@ -284,11 +288,11 @@
       </div>
       <div class="plan__foot">
         <ul class="plan__legend t-label" aria-label="Key to the plan">
-          <li><i class="plan__swatch" style="--c: #bcbdb8" aria-hidden="true"></i>Villa plot</li>
-          <li><i class="plan__swatch" style="--c: #a9b864" aria-hidden="true"></i>Lawn</li>
-          <li><i class="plan__swatch" style="--c: #a2e1ea" aria-hidden="true"></i>Pool</li>
-          <li><i class="plan__swatch" style="--c: #f0b39b" aria-hidden="true"></i>Walkway ring</li>
-          <li><i class="plan__swatch" style="--c: #5a3c22" aria-hidden="true"></i>Bicycle lane</li>
+          <li><i class="plan__swatch" style="--c: #fbf8f1" aria-hidden="true"></i>Villa</li>
+          <li><i class="plan__swatch" style="--c: #e3e4d2" aria-hidden="true"></i>Lawn</li>
+          <li><i class="plan__swatch" style="--c: #9ed6e0" aria-hidden="true"></i>Pool</li>
+          <li><i class="plan__swatch" style="--c: #d6cfc2" aria-hidden="true"></i>Loop road</li>
+          <li><i class="plan__swatch" style="--c: #f8f3ea" aria-hidden="true"></i>Walkway ring</li>
         </ul>
         <p class="plan__note">Plot 1 is set aside for a worship centre. Plots 2 and 22 are to be confirmed with Leventra.</p>
       </div>
