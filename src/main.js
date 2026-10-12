@@ -18,6 +18,7 @@ import { initHero } from './js/hero.js';
 import { initNav } from './js/nav.js';
 import { initTheme } from './js/theme.js';
 import { initMagnetic } from './js/magnetic.js';
+import { initReasons } from './js/reasons.js';
 
 window.lenis = lenis;          // QA hook
 lockScroll();                  // the cover holds the page until the lift
@@ -32,6 +33,7 @@ fontsReady().then(() => {
       initNav();
       initTheme();
       initMagnetic();
+      initReasons();
     },
   });
 });

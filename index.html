@@ -16,8 +16,7 @@
     try { if (sessionStorage.getItem('iv-visited')) document.documentElement.dataset.visited = '1'; } catch (e) {}
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.dataset.reduced = '1';
   </script>
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/PlayfairDisplay-Roman-latin.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/PlayfairDisplay-Italic-latin.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/Laluna-Regular.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/Jost-Roman-latin.woff2">
   <link rel="preload" as="image" type="image/avif" media="(orientation: landscape) and (min-width: 992px)" imagesizes="100vw" fetchpriority="high"
     imagesrcset="/assets/renders/hero-desktop-1280.avif 1280w, /assets/renders/hero-desktop-1600.avif 1600w, /assets/renders/hero-desktop-1920.avif 1920w, /assets/renders/hero-desktop-2560.avif 2560w, /assets/renders/hero-desktop-3248.avif 3248w">
@@ -114,10 +113,40 @@
           <path id="arc" d="M27.8,220 A472.2,192.2 0 0 1 972.2,220" fill="none"/>
           <text class="page__arc-text" data-arc-text><textPath href="#arc" startOffset="50%" text-anchor="middle">Three reasons to choose Istinye</textPath></text>
         </svg>
-        <h2 class="page__statement t-h1" id="reasons-title"><span class="page__line" data-reveal="p">A <em data-accent>considered</em> retreat —</span><span class="page__line" data-reveal="p">two minutes from Maitama</span></h2>
+        <h2 class="page__statement t-h1" id="reasons-title"><span class="page__line" data-reveal="p">A <em data-accent>considered</em> retreat,</span><span class="page__line" data-reveal="p">two minutes from Maitama</span></h2>
       </div>
       <div class="page__body">
         <span class="page__initial" aria-hidden="true">I</span>
+        <div class="reasons" data-reasons>
+          <div class="reasons__sticky">
+            <p class="reasons__eyebrow t-label">Three reasons</p>
+            <p class="reasons__index" aria-hidden="true"><span class="reasons__num" data-reasons-num>01</span><span class="reasons__of">/ 03</span></p>
+            <ol class="reasons__list">
+              <li class="reason is-active" data-reason="0">
+                <h3 class="reason__title"><span class="reason__line">Two minutes</span><span class="reason__line">from Maitama.</span></h3>
+                <p class="reason__text">Istinye Villas sits at Katampe Main (Gishiri), on A. Ularamu Medugu Crescent, two minutes from Maitama. Close enough to the city to use it; far enough that its demands fade at the gate.</p>
+                <ul class="reason__facts t-label"><li>Katampe Main</li><li>Gishiri</li><li>A. Ularamu Medugu Crescent</li></ul>
+              </li>
+              <li class="reason" data-reason="1">
+                <h3 class="reason__title"><span class="reason__line">A thousand square</span><span class="reason__line">metres, fully detached.</span></h3>
+                <p class="reason__text">Each residence is fully detached, a world of its own on approximately 1,000 square metres: six bedrooms over three floors, three living rooms, a private swimming pool, an elevator and covered parking for seven cars.</p>
+                <ul class="reason__facts t-label"><li>6 bedrooms</li><li>3 living rooms</li><li>Private pool</li><li>Elevator</li></ul>
+              </li>
+              <li class="reason" data-reason="2">
+                <h3 class="reason__title"><span class="reason__line">Twenty-eight villas,</span><span class="reason__line">fully serviced.</span></h3>
+                <p class="reason__text">A limited community of 28 private villas, curated around security, greenery and the quiet confidence of a well-managed address: 24-hour armed security, parks and landscaped areas, and dedicated worship centres.</p>
+                <ul class="reason__facts t-label"><li>24-hour armed security</li><li>Parks &amp; landscaped areas</li><li>Worship centres</li></ul>
+              </li>
+            </ol>
+            <div class="reasons__frame">
+              <div class="reasons__media is-active" data-reason-media="0"><picture><source type="image/avif" srcset="/assets/renders/reason-location-800.avif 800w, /assets/renders/reason-location-1200.avif 1200w, /assets/renders/reason-location-1600.avif 1600w" sizes="(max-width: 991px) 90vw, 49vw"><source type="image/webp" srcset="/assets/renders/reason-location-800.webp 800w, /assets/renders/reason-location-1200.webp 1200w, /assets/renders/reason-location-1600.webp 1600w" sizes="(max-width: 991px) 90vw, 49vw"><img src="/assets/renders/reason-location-1200.jpg" srcset="/assets/renders/reason-location-800.jpg 800w, /assets/renders/reason-location-1200.jpg 1200w, /assets/renders/reason-location-1600.jpg 1600w" sizes="(max-width: 991px) 90vw, 49vw" width="1600" height="1000" loading="lazy" decoding="async" alt="The approach to an Istinye villa from the street at golden hour, a car pulling into the forecourt."></picture></div>
+              <div class="reasons__media" data-reason-media="1"><picture><source type="image/avif" srcset="/assets/renders/reason-space-800.avif 800w, /assets/renders/reason-space-1200.avif 1200w, /assets/renders/reason-space-1600.avif 1600w" sizes="(max-width: 991px) 90vw, 49vw"><source type="image/webp" srcset="/assets/renders/reason-space-800.webp 800w, /assets/renders/reason-space-1200.webp 1200w, /assets/renders/reason-space-1600.webp 1600w" sizes="(max-width: 991px) 90vw, 49vw"><img src="/assets/renders/reason-space-1200.jpg" srcset="/assets/renders/reason-space-800.jpg 800w, /assets/renders/reason-space-1200.jpg 1200w, /assets/renders/reason-space-1600.jpg 1600w" sizes="(max-width: 991px) 90vw, 49vw" width="1600" height="1000" loading="lazy" decoding="async" alt="The rear terrace of an Istinye villa with its private pool and loungers in late light."></picture></div>
+              <div class="reasons__media reasons__media--plan" data-reason-media="2"><picture><source type="image/avif" srcset="/assets/renders/reason-community-800.avif 800w, /assets/renders/reason-community-1200.avif 1200w, /assets/renders/reason-community-1600.avif 1600w" sizes="(max-width: 991px) 90vw, 49vw"><source type="image/webp" srcset="/assets/renders/reason-community-800.webp 800w, /assets/renders/reason-community-1200.webp 1200w, /assets/renders/reason-community-1600.webp 1600w" sizes="(max-width: 991px) 90vw, 49vw"><img src="/assets/renders/reason-community-1200.jpg" srcset="/assets/renders/reason-community-800.jpg 800w, /assets/renders/reason-community-1200.jpg 1200w, /assets/renders/reason-community-1600.jpg 1600w" sizes="(max-width: 991px) 90vw, 49vw" width="1600" height="1000" loading="lazy" decoding="async" alt="The master plan of the 28-villa community at Plot 1467 Katampe."></picture></div>
+              <i class="reasons__tick reasons__tick--tl" aria-hidden="true"></i><i class="reasons__tick reasons__tick--tr" aria-hidden="true"></i><i class="reasons__tick reasons__tick--bl" aria-hidden="true"></i><i class="reasons__tick reasons__tick--br" aria-hidden="true"></i>
+            </div>
+            <div class="reasons__progress" aria-hidden="true"><i data-reason-seg="0"></i><i data-reason-seg="1"></i><i data-reason-seg="2"></i></div>
+          </div>
+        </div>
         <p class="page__meta t-label">Leventra / Istinye Villas / Abuja</p>
       </div>
     </section>

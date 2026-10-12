@@ -5,7 +5,6 @@
 .nav { position: fixed; inset: 0 0 auto 0; z-index: 20; height: 120px; pointer-events: none; }
 .nav > * { pointer-events: auto; }
 .nav__brand { position: absolute; left: var(--margin); top: calc(4.2svh - var(--jo-captop)); padding-block: 7px; margin-top: -7px; white-space: nowrap; }
-html:is([data-state="loading"], [data-state="cover"]) .nav__brand { color: var(--gold); }
 html[data-state="lift"] .nav__brand { transition-duration: 1.2s; }
 
 .nav__rule { position: absolute; left: var(--margin); top: 7.25svh; height: 1px; width: calc(var(--rule-end, 95vw) - var(--margin)); background: var(--line); transition: width 0.8s var(--ease), background-color var(--dur-s) var(--ease-out); --ease: cubic-bezier(0.25, 0.1, 0.25, 1); }
@@ -43,8 +42,8 @@ html[data-reduced="1"] :is(.nav__cover, .nav__stack, .nav__menu) { transition: n
 
 /* enquiry tip */
 .tip { position: absolute; right: var(--margin); top: calc(10.2svh + 28px); width: 264px; padding: 20px; background: var(--cream-2); color: var(--ink); border: 1px solid var(--border-gold); z-index: 25; transform-origin: top right; }
-.tip__label { color: var(--gold-deep); margin-bottom: 14px; }
-.tip__num { font: 400 22px / 1 var(--font-display); font-variant-numeric: oldstyle-nums; margin-bottom: 14px; user-select: all; }
+.tip__label { color: rgb(var(--ink-rgb) / 0.5); margin-bottom: 14px; }
+.tip__num { font: 400 22px / 1 var(--font-display); margin-bottom: 14px; user-select: all; }
 .tip__link { display: block; color: var(--ink); padding-block: 4px; }
 .tip__link.is-muted { color: rgb(var(--ink-rgb) / 0.5); }
 
@@ -60,7 +59,7 @@ html[data-state="lift"] .chrome__foot { transition-duration: 1.2s; }
 .pagering circle { fill: none; stroke-width: 1; }
 .pagering__track { stroke: rgb(var(--gold-rgb) / 0.3); }
 .pagering__fill { stroke: var(--gold); stroke-dasharray: 122.5; stroke-dashoffset: 122.5; transform: rotate(-90deg); transform-origin: center; }
-.pagering__num { font: italic 400 15px / 1 var(--font-display); font-variant-numeric: oldstyle-nums; fill: var(--gold-deep); }
+.pagering__num { font: 400 15px / 1 var(--font-display); fill: var(--ink); }
 .chrome__slot[data-on="light"] .wordmark { opacity: 0; transform: translateY(-12px); }
 .chrome__slot[data-on="light"] .pagering { opacity: 1; transform: none; }
 

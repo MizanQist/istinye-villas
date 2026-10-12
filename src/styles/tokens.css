@@ -12,7 +12,7 @@
   --gold-rgb: 175 140 86;
 
   /* Type */
-  --font-display: "Playfair Display", "Playfair Fallback", Georgia, serif;
+  --font-display: "Laluna", "Laluna Fallback", Georgia, serif;
   --font-sans: "Jost", "Jost Fallback", "Helvetica Neue", Arial, sans-serif;
 
   /* Motion vocabulary (the reference site's constants) */
@@ -95,8 +95,8 @@
   --fs-watermark: 46.6vw;
 
   /* baseline/cap-top offsets with line-height 1 (from the fonts' hhea metrics) */
-  --pf-baseline: 0.9155em;  /* Playfair: baseline below the line-box top */
-  --pf-captop: 0.2075em;    /* Playfair: cap-top below the line-box top */
+  --pf-baseline: 0.78em;    /* Laluna: baseline below the line-box top (asc .76, desc .20, line-height 1) */
+  --pf-captop: 0.08em;      /* Laluna: cap-top below the line-box top (cap .70) */
   --jo-baseline: 0.8475em;  /* Jost */
   --jo-captop: 0.1475em;
 }
@@ -112,18 +112,18 @@
 
 /* type classes */
 .t-display { font: 400 var(--fs-display) / 1 var(--font-display); letter-spacing: -0.03em; }
-.t-display em { font-style: italic; font-size: var(--fs-display-sub); letter-spacing: -0.03em; }
+.t-display em { font-style: normal; font-size: var(--fs-display-sub); letter-spacing: -0.03em; }
 .t-tagline { font: 400 var(--fs-tagline) / 1.1 var(--font-display); letter-spacing: -0.02em; text-align: right; }
-.t-tagline em { font-style: italic; font-weight: 500; color: var(--gold); }
+.t-tagline em { font-style: normal; }
 .t-label { font: 400 var(--fs-label) / 1 var(--font-sans); text-transform: uppercase; letter-spacing: 0.25em; }
 .t-eyebrow { letter-spacing: 0.6em; }
 .t-address { font: 400 var(--fs-address) / 1.4 var(--font-sans); text-transform: uppercase; letter-spacing: 0.14em; }
 .t-nav-big { font: 400 var(--fs-nav-big) / 1 var(--font-display); }
 .t-nav-sm { font: 400 var(--fs-label-sm) / 1 var(--font-sans); text-transform: uppercase; letter-spacing: 0.32em; }
-.t-counter { font: 400 var(--fs-counter) / 1 var(--font-display); font-variant-numeric: oldstyle-nums tabular-nums; color: var(--gold); }
-.t-fact-num { font: 400 var(--fs-fact-num) / 1 var(--font-display); font-variant-numeric: oldstyle-nums proportional-nums; }
-.t-fact-num small { font-size: var(--fs-fact-unit); color: var(--gold); margin-left: 0.2em; }
+.t-counter { font: 400 var(--fs-counter) / 1 var(--font-display); font-variant-numeric: tabular-nums; color: var(--cream); }
+.t-fact-num { font: 400 var(--fs-fact-num) / 1 var(--font-display);  }
+.t-fact-num small { font-size: var(--fs-fact-unit); margin-left: 0.2em; }
 .t-fact-label { font: 400 var(--fs-fact-label) / 1 var(--font-sans); text-transform: uppercase; letter-spacing: 0.3em; color: rgb(var(--cream-rgb) / 0.7); margin-left: 0.4em; }
 .t-h1 { font: 400 var(--fs-h1) / 1.05 var(--font-display); letter-spacing: -0.025em; }
-.t-h1 em { font-style: italic; color: var(--gold); }
+.t-h1 em { font-style: normal; }
 .t-right { margin-right: -0.25em; }

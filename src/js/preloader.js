@@ -91,7 +91,6 @@ export function runPreloader({ onReady }) {
         gsap.set(E.facts[0], { visibility: 'visible' });
         gsap.set(E.fact28, { visibility: 'hidden' });
         Flip.fit(E.counter, E.fact28, { duration: 1.2, ease: 'out', scale: true });
-        gsap.to(E.counter, { color: '#f4efe8', duration: 1.2, ease: 'out' });
       }, 0.3)
         .add(() => { gsap.set(E.fact28, { visibility: 'visible' }); gsap.set(E.counterWrap, { visibility: 'hidden' }); }, 1.8);
     } else {
