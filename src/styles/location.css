@@ -6,7 +6,7 @@
 .location__line { display: block; }
 .location__body { font: 400 clamp(0.9375rem, 0.85rem + 0.3vw, 1.125rem) / 1.75 var(--font-sans); color: rgb(var(--cream-rgb) / 0.68); max-width: 30em; margin: 0 0 5svh; }
 .location__facts { display: flex; flex-direction: column; border-top: 1px solid rgb(var(--cream-rgb) / 0.16); }
-.location__facts li { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 1.1em 0; border-bottom: 1px solid rgb(var(--cream-rgb) / 0.16); }
+.location__facts li { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 0.85em 0; border-bottom: 1px solid rgb(var(--cream-rgb) / 0.16); }
 .location__facts .t-label { color: rgb(var(--cream-rgb) / 0.5); font-size: var(--fs-label-sm); }
 .location__facts b { font: 400 clamp(1.1rem, 1.4vw, 1.5rem) / 1 var(--font-display); }
 .location__map { position: absolute; inset: 0 0 0 30vw; }
