@@ -85,7 +85,7 @@ export function initPlan() {
   // ---- the signature: the pen draws the road under scroll; each plot is stamped as the pen reaches it
   if (REDUCED) stampTo(1);
   else {
-    const tl = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { trigger: stage, start: 'top 60%', end: 'center 42%', scrub: true, onUpdate: (st) => stampTo(st.progress) } });
+    const tl = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { trigger: stage, start: 'top 60%', end: 'center 52%', scrub: true, onUpdate: (st) => stampTo(st.progress) } });
     tl.to(pen, { strokeDashoffset: 0, duration: 1 }, 0);
     tl.to(ring, { strokeDashoffset: 0, duration: 0.05 }, fRing);
     tl.to(spine, { strokeDashoffset: 0, duration: 0.12 }, fSpine);
