@@ -11,10 +11,13 @@ export function initHero() {
   const area = q('.hero__area'), sticky = q('.hero__sticky'), media = q('.hero__media'), plate = q('.hero__plate'), img = q('.hero__img img');
   const page = q('.hero__page'), ramp = q('.hero__veil--ramp'), eyebrow = q('.hero__eyebrow');
   const pins = qa('.pin');
-  const P = () => Math.max(0, img.offsetHeight - sticky.offsetHeight);
+  // plate height from the stylesheet's ratio, so the rest position never depends on when the image or CSS arrived
+  const plateH = () => Math.max(window.innerHeight, window.innerWidth * (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--plate-ratio')) || 0.9003));
+  const P = () => Math.max(0, plateH() - window.innerHeight);
   const rest = () => (isPhone() ? 0 : -0.3 * P());
   gsap.set(media, { y: rest() });
-  img.addEventListener('load', () => { if (!armed) gsap.set(media, { y: rest() }); ScrollTrigger.refresh(); });
+  img.addEventListener('load', () => ScrollTrigger.refresh());
+  requestAnimationFrame(() => gsap.set(media, { y: rest() }));
 
   let armed = false;
   let scrub = null;
@@ -38,6 +41,7 @@ export function initHero() {
     const phone = isPhone();
     scrub = gsap.timeline({ scrollTrigger: { trigger: area, start: 'top top', end: 'bottom bottom', scrub: true, invalidateOnRefresh: true, onUpdate: (t) => parallax.arm(t.progress === 0) } });
     if (REDUCED) {
+      gsap.set(media, { y: rest() });
       scrub.fromTo(ramp, { opacity: 1 }, { opacity: 0, ease: 'ease', duration: 0.45 }, 0);
       gsap.set(pins, { autoAlpha: 1 });
       return;
