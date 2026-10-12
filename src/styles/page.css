@@ -17,7 +17,7 @@
 }
 
 /* ---------- three reasons: a pinned stage, one reason per screen of scroll ---------- */
-.reasons { position: relative; height: calc(3 * 100svh + 40svh); }
+.reasons { position: relative; height: calc(3 * 100svh + 40svh); padding-top: 24svh; box-sizing: content-box; }
 .reasons__sticky { position: sticky; top: 0; height: 100svh; overflow: clip; }
 .reasons__eyebrow { position: absolute; left: var(--margin); top: calc(13.2svh - var(--jo-captop)); color: rgb(var(--ink-rgb) / 0.5); }
 .reasons__index { position: absolute; left: var(--margin); top: calc(19.5svh - var(--pf-captop)); font: 400 clamp(1.25rem, 1.53vw, 1.75rem) / 1 var(--font-display); display: flex; align-items: baseline; gap: 0.4em; }
@@ -47,7 +47,7 @@
 .reasons__progress i::after { content: ""; position: absolute; inset: 0; background: var(--ink); transform: scaleX(var(--p, 0)); transform-origin: left center; }
 
 @media (max-width: 991px), (orientation: portrait) {
-  .reasons { height: auto; }
+  .reasons { height: auto; padding-top: 0; }
   .reasons__sticky { position: static; height: auto; overflow: visible; padding: 10svh var(--margin) 14svh; }
   .reasons__eyebrow, .reasons__index, .reasons__frame, .reasons__progress { display: none; }
   .reasons__list { position: static; width: auto; }
