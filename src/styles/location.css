@@ -1,11 +1,10 @@
 /* section 5 — location: the real map of Katampe in the night palette, the route to Maitama drawn in */
 .location { position: relative; min-height: 100svh; background: var(--night); color: var(--cream); overflow: clip; display: grid; grid-template-columns: 36vw 1fr; }
-.location__text { position: relative; z-index: 2; padding: 16svh var(--margin) 12svh; align-self: center; }
+.location__text { position: relative; z-index: 2; padding: 14svh var(--margin) 10svh; align-self: start; }
 .location__eyebrow { color: rgb(var(--cream-rgb) / 0.5); margin-bottom: 3.2svh; }
 .location__title { font: 400 clamp(2.4rem, 4.85vw, 5.2rem) / 1.04 var(--font-display); letter-spacing: -0.02em; margin: 0 0 4svh; }
 .location__line { display: block; }
 .location__body { font: 400 clamp(0.9375rem, 0.85rem + 0.3vw, 1.125rem) / 1.75 var(--font-sans); color: rgb(var(--cream-rgb) / 0.68); max-width: 30em; margin: 0 0 5svh; }
-.location__facts { display: flex; flex-direction: column; border-top: 1px solid rgb(var(--cream-rgb) / 0.16); }
 .location__facts li { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 0.85em 0; border-bottom: 1px solid rgb(var(--cream-rgb) / 0.16); }
 .location__facts .t-label { color: rgb(var(--cream-rgb) / 0.5); font-size: var(--fs-label-sm); }
 .location__facts b { font: 400 clamp(1.1rem, 1.4vw, 1.5rem) / 1 var(--font-display); }

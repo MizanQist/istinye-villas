@@ -10,6 +10,7 @@ import './styles/menu.css';
 import './styles/quote.css';
 import './styles/concept.css';
 import './styles/location.css';
+import './styles/locmap.css';
 
 import './js/eases.js';
 import { lenis, lockScroll } from './js/scroll.js';
