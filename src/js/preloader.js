@@ -57,6 +57,7 @@ export function runPreloader({ onReady }) {
   // every cover piece to its finished state (skip and repeat paths)
   function finishCover(dur) {
     const to = (t, vars) => gsap.to(t, { duration: dur, ease: 'out', overwrite: true, ...vars });
+    [E.brand, E.cover, E.eyebrow, E.address, E.titleA, E.navRule, E.foot, E.wordmark].forEach((el) => to(el, { opacity: 1 }));
     [E.brand, E.cover, E.eyebrow, E.address].forEach((el) => el._split && to(el._split.lines, { yPercent: 0 }));
     to(titleChars(), { opacity: 1, yPercent: 0, rotateY: 0, marginRight: '-0.03em' });
     [E.navRule, E.foot].forEach((el) => to(el, { clipPath: 'inset(0% 0% 0% 0%)' }));

@@ -12,5 +12,6 @@
 .page__meta { position: absolute; left: var(--margin); bottom: 4.2svh; color: rgb(var(--ink-rgb) / 0.5); white-space: nowrap; }
 @media (max-width: 991px), (orientation: portrait) {
   .page__arc-text { font-size: 10px; }
-  .page__statement { font-size: 38px; max-width: 350px; }
+  .page__crown { height: auto; min-height: var(--crown); padding: calc(var(--crown) * 0.85) var(--margin) 32px; }
+  .page__statement { font-size: 30px; max-width: 340px; }
 }

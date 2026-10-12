@@ -67,6 +67,7 @@ html:is([data-state="lift"], [data-state="ready"]) .hero__rule { background: var
 /* ---------- phone layout ---------- */
 @media (max-width: 991px), (orientation: portrait) {
   .hero__img img { object-position: 50% 50%; }
+  @media (min-width: 600px) { .hero__img img { object-position: 50% 42%; } }
   .hero__grain { display: none; }
   .hero__eyebrow { top: calc(52svh - var(--jo-captop)); font-size: var(--fs-label-sm); }
   .hero__short { top: 56svh; width: 40px; }
