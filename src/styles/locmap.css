@@ -1,5 +1,5 @@
 /* the interactive map, in the night palette */
-.locmap { position: absolute; inset: 0 0 0 30vw; }
+.locmap { position: absolute; inset: 0 0 0 30vw; z-index: 1; isolation: isolate; }
 .locmap__map { position: absolute; inset: 0; background: var(--night); }
 .locmap .leaflet-container { background: var(--night); font-family: var(--font-sans); }
 .locmap .lm-tiles { filter: invert(1) grayscale(1) brightness(0.62) contrast(0.9) sepia(0.28); }
