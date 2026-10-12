@@ -1,0 +1,16 @@
+/* section 2 — the next page of the brochure, laid over the photograph */
+.page { position: relative; z-index: 2; margin-top: calc(-1 * (100svh + var(--crown))); min-height: calc(var(--crown) + 100svh); background: var(--cream); color: var(--ink); border-radius: 50vw 50vw 0 0 / var(--crown) var(--crown) 0 0; }
+.page::before { content: ""; position: absolute; left: -12px; right: -12px; top: -12px; height: calc(var(--crown) + 12px); border: 1px solid var(--rule-gold); border-bottom: 0; border-radius: calc(50vw + 12px) calc(50vw + 12px) 0 0 / calc(var(--crown) + 12px) calc(var(--crown) + 12px) 0 0; clip-path: inset(0 calc(var(--margin) + 12px) 0 calc(var(--margin) + 12px)); pointer-events: none; }
+.page__crown { position: relative; height: var(--crown); display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 24px; }
+.page__arc { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.page__arc-text { font: 400 7.64px / 1 var(--font-sans); letter-spacing: 0.32em; text-transform: uppercase; fill: var(--gold-deep); }
+.page__statement { text-align: center; max-width: 1296px; padding-inline: var(--margin); }
+.page__line { display: block; }
+.page__statement em { display: inline-block; }
+.page__body { position: relative; min-height: 100svh; overflow: clip; }
+.page__initial { position: absolute; right: -14vw; top: 0; font: 400 var(--fs-watermark) / 1 var(--font-display); color: var(--watermark); user-select: none; pointer-events: none; }
+.page__meta { position: absolute; left: var(--margin); bottom: 4.2svh; color: rgb(var(--ink-rgb) / 0.5); white-space: nowrap; }
+@media (max-width: 991px), (orientation: portrait) {
+  .page__arc-text { font-size: 10px; }
+  .page__statement { font-size: 38px; max-width: 350px; }
+}
