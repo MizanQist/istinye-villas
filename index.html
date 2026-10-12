@@ -222,6 +222,50 @@
       </div>
     </section>
 
+    <section class="location" id="location" data-bg="dark" aria-labelledby="location-title">
+      <div class="location__map" data-location-map>
+        <div class="location__plate">
+        <picture>
+          <source type="image/avif" sizes="(max-width: 991px) 100vw, 64vw" srcset="/assets/renders/map-1000.avif 1000w, /assets/renders/map-1600.avif 1600w, /assets/renders/map-2400.avif 2400w">
+          <source type="image/webp" sizes="(max-width: 991px) 100vw, 64vw" srcset="/assets/renders/map-1000.webp 1000w, /assets/renders/map-1600.webp 1600w, /assets/renders/map-2400.webp 2400w">
+          <img src="/assets/renders/map-1600.jpg" srcset="/assets/renders/map-1000.jpg 1000w, /assets/renders/map-1600.jpg 1600w, /assets/renders/map-2400.jpg 2400w" sizes="(max-width: 991px) 100vw, 64vw" width="2400" height="1500" loading="lazy" decoding="async" alt="Map of north-west Abuja: Katampe, Maitama, Jabi and Wuse.">
+        </picture>
+        <svg class="location__overlay" viewBox="0 0 2400 1500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><filter id="loc-blur"><feGaussianBlur stdDeviation="2"/></filter></defs>
+          <g class="location__districts">
+            <text x="1020" y="500">Katampe District</text>
+            <text x="500" y="350">Jahi</text>
+            <text x="740" y="950">Mabushi</text>
+            <text x="130" y="1150">Jabi Lake</text>
+            <text x="1340" y="1130">Wuse</text>
+            <text x="1700" y="790">Maitama District</text>
+            <text x="1180" y="1300">Central Area</text>
+          </g>
+          <path class="location__route" data-route d="M1700 790 C 1600 780, 1500 760, 1330 690" fill="none"/>
+          <g class="location__pin" transform="translate(1330 690)">
+            <circle class="location__pin-pulse" data-pulse r="24"/>
+            <circle class="location__pin-ring" r="24"/>
+            <circle class="location__pin-dot" r="5"/>
+          </g>
+          <text class="location__site" x="1330" y="640" text-anchor="middle">Istinye Villas</text>
+          <text class="location__site-sub" x="1330" y="676" text-anchor="middle">Katampe Main · Gishiri</text>
+          <text class="location__min" x="1530" y="700" text-anchor="middle">2 min</text>
+        </svg>
+        </div>
+        <p class="location__credit">Map data © OpenStreetMap contributors</p>
+      </div>
+      <div class="location__scrim" aria-hidden="true"></div>
+      <div class="location__text">
+        <p class="location__eyebrow t-label" data-reveal="p">Location</p>
+        <h2 class="location__title" id="location-title"><span class="location__line" data-reveal="p">Katampe Main,</span><span class="location__line" data-reveal="p">Gishiri.</span></h2>
+        <p class="location__body" data-reveal="p">On A. Ularamu Medugu Crescent, two minutes from Maitama. Katampe sits on the northern edge of the capital, above Jabi and Wuse, with the Murtala Mohammed Expressway at its back.</p>
+        <ul class="location__facts" data-reveal="ctn">
+          <li><span class="t-label">Plot</span><b>1467</b></li>
+          <li><span class="t-label">Cadastral zone</span><b>B07, Katampe</b></li>
+          <li><span class="t-label">From Maitama</span><b>2 min</b></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <aside class="chrome" aria-hidden="true">
