@@ -1,0 +1,43 @@
+/* section 4 — the concept: the brochure's text page (narrow column, hairline, wide column) */
+.concept { position: relative; background: var(--cream); color: var(--ink); padding: 14svh 0 12svh; overflow: clip; }
+.concept__initial { position: absolute; right: -12vw; top: 2svh; font: 400 var(--fs-watermark) / 1 var(--font-display); color: var(--watermark); user-select: none; pointer-events: none; }
+.concept__grid { position: relative; display: grid; grid-template-columns: 31vw 1px 1fr; column-gap: 4vw; padding-inline: var(--margin); }
+.concept__eyebrow { color: rgb(var(--ink-rgb) / 0.5); margin-bottom: 3.2svh; }
+.concept__title { font: 400 clamp(2.4rem, 4.85vw, 5.2rem) / 1.04 var(--font-display); letter-spacing: -0.02em; margin: 0 0 8svh; }
+.concept__line { display: block; }
+.concept__rule { display: block; width: 1px; background: var(--hairline); align-self: stretch; }
+.concept__body { font: 400 clamp(0.9375rem, 0.85rem + 0.3vw, 1.125rem) / 1.75 var(--font-sans); color: rgb(var(--ink-rgb) / 0.72); max-width: 34em; margin: 0 0 1.4em; }
+.concept__wide { padding-top: 0.6em; }
+
+/* stats — the open stat row of page 03 */
+.stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border-block: 1px solid var(--rule-gold); margin-top: 6svh; }
+.stat { padding: 2.2vw 1.6vw 2vw 0; display: flex; flex-direction: column; gap: 0.8em; }
+.stat:nth-child(even) { padding-left: 1.6vw; border-left: 1px solid var(--hairline); }
+.stat:nth-child(n + 3) { border-top: 1px solid var(--hairline); }
+.stat__num { font: 400 clamp(1.75rem, 2.6vw, 2.75rem) / 1 var(--font-display); font-variant-numeric: tabular-nums; }
+.stat__num small { font-size: 0.6em; margin-left: 0.15em; }
+.stat__label { font-size: var(--fs-label-sm); color: rgb(var(--ink-rgb) / 0.5); }
+
+/* principles — five numbered rows with hairlines */
+.principles { margin-top: 8svh; border-top: 1px solid var(--hairline); }
+.principle { position: relative; display: grid; grid-template-columns: 3.2em 1fr; grid-template-areas: "num name" "num desc"; column-gap: 1em; padding: 1.6em 0 1.5em; border-bottom: 1px solid var(--hairline); cursor: default; }
+.principle__num { grid-area: num; font: 400 1rem / 1.3 var(--font-display); color: rgb(var(--ink-rgb) / 0.45); transition: color var(--dur-s) var(--ease-out); }
+.principle__name { grid-area: name; margin: 0; font: 400 clamp(1.5rem, 2.1vw, 2.1rem) / 1.1 var(--font-display); letter-spacing: -0.01em; }
+.principle__desc { grid-area: desc; margin: 0; font: 400 clamp(0.875rem, 0.8rem + 0.25vw, 1rem) / 1.6 var(--font-sans); color: rgb(var(--ink-rgb) / 0.62); max-width: 36em; overflow: clip; }
+@media (hover: hover) and (min-width: 992px) {
+  .principle__desc { height: 0; opacity: 0; transform: translateY(8px); transition: height var(--dur-m) var(--ease-in-out), opacity var(--dur-m) var(--ease-out), transform var(--dur-m) var(--ease-out), margin var(--dur-m) var(--ease-in-out); }
+  .principle:hover .principle__desc, .principle.is-open .principle__desc { height: var(--desc-h, 2.2em); opacity: 1; transform: none; margin-top: 0.6em; }
+  .principle:hover .principle__num, .principle.is-open .principle__num { color: var(--ink); }
+}
+.principle__desc { margin-top: 0.5em; }
+.concept__meta { margin: 10svh var(--margin) 0; color: rgb(var(--ink-rgb) / 0.5); }
+
+@media (max-width: 991px), (orientation: portrait) {
+  .concept { padding: 12svh 0 10svh; }
+  .concept__grid { grid-template-columns: 1fr; padding-inline: var(--margin); }
+  .concept__rule { display: none; }
+  .concept__title { font-size: clamp(2.2rem, 9.2vw, 3rem); margin-bottom: 5svh; }
+  .stats { order: 3; margin-top: 7svh; }
+  .concept__wide { padding-top: 0; }
+  .concept__initial { right: -24vw; top: 8svh; font-size: 90vw; }
+}

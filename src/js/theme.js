@@ -3,6 +3,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // Fixed chrome carries [data-theme]; sections carry [data-bg="dark|light|image"].
 // One ScrollTrigger per (zone, item): the item takes the zone's tone when the zone's edge crosses the item's centre.
 // Zones are made contiguous (end = next zone's start) so scrolling back always restores the previous tone.
+const setIndex = (zone) => { if (zone.dataset.index) document.querySelectorAll('[data-ring-num]').forEach((n) => { n.textContent = zone.dataset.index; }); };
+
 export function initTheme() {
   const items = [...document.querySelectorAll('[data-theme]')];
   const zones = [...document.querySelectorAll('[data-bg]')];
@@ -24,8 +26,8 @@ export function initTheme() {
       start: () => `top top+=${cy - chord(zone, cx)}`,
       endTrigger: next || zone,
       end: () => (next ? `top top+=${cy - chord(next, cx)}` : `bottom top+=${cy}`),
-      onEnter: () => { item.dataset.on = zone.dataset.bg; },
-      onEnterBack: () => { item.dataset.on = zone.dataset.bg; },
+      onEnter: () => { item.dataset.on = zone.dataset.bg; setIndex(zone); },
+      onEnterBack: () => { item.dataset.on = zone.dataset.bg; setIndex(zone); },
     });
   }));
 }

@@ -8,6 +8,7 @@ import './styles/nav.css';
 import './styles/page.css';
 import './styles/menu.css';
 import './styles/quote.css';
+import './styles/concept.css';
 
 import './js/eases.js';
 import { lenis, lockScroll } from './js/scroll.js';
@@ -21,6 +22,7 @@ import { initTheme } from './js/theme.js';
 import { initMagnetic } from './js/magnetic.js';
 import { initReasons } from './js/reasons.js';
 import { initQuote } from './js/quote.js';
+import { initConcept } from './js/concept.js';
 
 window.lenis = lenis;          // QA hook
 lockScroll();                  // the cover holds the page until the lift
@@ -37,6 +39,7 @@ fontsReady().then(() => {
       initMagnetic();
       initReasons();
       initQuote();
+      initConcept();
     },
   });
 });

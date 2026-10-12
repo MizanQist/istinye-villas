@@ -127,7 +127,7 @@ export function initHero() {
     const pageEl = q('.page'); if (!pageEl) return;
     pageEl.dataset.crown = isPhone() ? '0.30' : '0.22';
     const fill = q('[data-ring-fill]');
-    ScrollTrigger.create({ trigger: pageEl, start: 'top top', end: 'bottom bottom', onUpdate: (t) => { if (fill) fill.style.strokeDashoffset = 122.5 * (1 - t.progress); } });
+    qa('[data-bg="light"][data-index]').forEach((zone) => ScrollTrigger.create({ trigger: zone, start: 'top top', end: 'bottom bottom', onUpdate: (t) => { if (fill) fill.style.strokeDashoffset = 122.5 * (1 - t.progress); } }));
     const arcText = q('[data-arc-text]');
     if (arcText && !REDUCED) gsap.fromTo(arcText, { wordSpacing: '0em', letterSpacing: '0.32em' }, { wordSpacing: '0.6em', letterSpacing: '0.40em', ease: 'none', scrollTrigger: { trigger: pageEl, start: 'top bottom', end: 'top top', scrub: true } });
     const initial = q('.page__initial');
