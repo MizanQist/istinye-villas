@@ -12,6 +12,7 @@ import './styles/concept.css';
 import './styles/location.css';
 import './styles/locmap.css';
 import './styles/plan.css';
+import './styles/villa.css';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './js/eases.js';
@@ -29,6 +30,7 @@ import { initQuote } from './js/quote.js';
 import { initConcept } from './js/concept.js';
 import { initLocation } from './js/location.js';
 import { initPlan } from './js/plan.js';
+import { initVilla } from './js/villa.js';
 
 window.lenis = lenis;          // QA hook
 lockScroll();                  // the cover holds the page until the lift
@@ -48,6 +50,7 @@ fontsReady().then(() => {
       initConcept();
       initLocation();
       initPlan();
+      initVilla();
       ScrollTrigger.refresh();   // the concept area grows during these inits; every trigger measures against the final layout
     },
   });

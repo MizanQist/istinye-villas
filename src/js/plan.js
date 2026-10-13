@@ -109,7 +109,7 @@ export function initPlan() {
   // ---- the hand-off: a leader from the typical plot to the foot of the page (section 7 starts its rule at the same x)
   const typical = byN[TYPICAL];
   const geom = () => { const r = root.getBoundingClientRect(), s = stage.getBoundingClientRect(); leader.style.setProperty('--lh', `${r.bottom - s.top - (typical.sy / 100) * s.height - 22}px`); };
-  const setLeader = () => { leader.style.setProperty('--lx', `${typical.sx}%`); leader.style.setProperty('--ly', `calc(${typical.sy}% + 22px)`); };
+  const setLeader = () => { leader.style.setProperty('--lx', `${typical.sx}%`); leader.style.setProperty('--ly', `calc(${typical.sy}% + 22px)`); document.documentElement.style.setProperty('--leader-page-x', `${Math.round(stage.offsetLeft + (typical.sx / 100) * stage.offsetWidth)}px`); };
   setLeader(); geom(); ScrollTrigger.addEventListener('refreshInit', geom);
   ScrollTrigger.create({ trigger: foot, start: 'top 85%', once: true, onEnter: () => { geom(); line(leader, 'reveal', 0.3); ctn(root.querySelectorAll('.plan__callout-label'), 'reveal', 0.6); } });
 

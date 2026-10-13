@@ -1,0 +1,50 @@
+// The villa, floor by floor, from the brochure's plan sheets (areas as scheduled; marker x/y are % of each plan image).
+export const FLOORS = [
+  {
+    id: 'g', name: 'Ground floor', short: 'the ground floor', img: 'floor-g', w: 2018, h: 1823,
+    stats: [{ n: 111, unit: 'sqm', label: 'Living and dining' }, { n: 10, label: 'Rooms' }],
+    desc: 'Arrival. The foyer opens onto 111 square metres of living and dining, with a formal dining room and a visitor’s lounge to one side. The kitchen, gym, guest bedroom and staff rooms sit behind, by the service court.',
+    rooms: [
+      { n: 1, name: 'Main living room and dining', area: 111, x: 42.8, y: 61.0 },
+      { n: 2, name: 'Formal dining', area: 35, x: 78.2, y: 61.0 },
+      { n: 3, name: 'Visitor’s lounge', area: 30, x: 89.6, y: 79.7 },
+      { n: 4, name: 'Guest bedroom', area: 19, x: 14.5, y: 79.7 },
+      { n: 5, name: 'Maid’s room', area: 9, x: 14.5, y: 23.1 },
+      { n: 6, name: 'Kitchen', area: 23, x: 11.8, y: 61.0 },
+      { n: 7, name: 'Foyer', area: 13, x: 68.2, y: 79.7 },
+      { n: 8, name: 'Laundry', area: 5, x: 15.1, y: 35.0 },
+      { n: 9, name: 'Gym', area: 19, x: 27.8, y: 30.8 },
+      { n: 10, name: 'Equipment room', area: 3, x: 24.5, y: 18.9 },
+    ],
+  },
+  {
+    id: '1', name: 'First floor', short: 'the first floor', img: 'floor-1', w: 2070, h: 1668,
+    stats: [{ n: 3, label: 'Bedrooms' }, { n: 60, unit: 'sqm', label: 'Terrace' }],
+    desc: 'Family. Three bedrooms, a media room and a family lounge gather around a 25 square metre lobby at the top of the stairs and lift, with a 60 square metre terrace opening off the lounge.',
+    rooms: [
+      { n: 1, name: 'Bedroom 1', area: 32, x: 81.6, y: 53.3 },
+      { n: 2, name: 'Bedroom 2', area: 24, x: 25.9, y: 82.1 },
+      { n: 3, name: 'Bedroom 3', area: 24, x: 82.9, y: 82.1 },
+      { n: 4, name: 'Media room', area: 17, x: 56.9, y: 82.1 },
+      { n: 5, name: 'Lobby', area: 25, x: 55.4, y: 69.2 },
+      { n: 6, name: 'Family lounge', area: 47, x: 31.5, y: 53.3 },
+      { n: 7, name: 'Terrace', area: 60, x: 35.3, y: 30.8 },
+      { n: 8, name: 'Roof slab', area: 47, x: 14.9, y: 30.5 },
+    ],
+  },
+  {
+    id: '2', name: 'Second floor', short: 'the second floor', img: 'floor-2', w: 1916, h: 1091,
+    stats: [{ n: 2, label: 'Suites' }, { n: 82, unit: 'sqm', label: 'Terrace' }],
+    desc: 'Private. The master’s and madam’s suites, each with a walk-in closet and its own bathroom, share a lounge between them, and an 82 square metre terrace wraps the whole floor.',
+    rooms: [
+      { n: 1, name: 'Master’s bedroom', area: 46, x: 77.9, y: 64.6 },
+      { n: 2, name: 'Master’s walk-in closet', area: 14, x: 59.7, y: 31.5 },
+      { n: 3, name: 'Master’s bathroom', area: 13, x: 45.4, y: 32.6 },
+      { n: 4, name: 'Madam’s bedroom', area: 39, x: 16.2, y: 64.6 },
+      { n: 5, name: 'Madam’s walk-in closet', area: 9, x: 16.5, y: 31.5 },
+      { n: 6, name: 'Madam’s bathroom', area: 13, x: 31.9, y: 31.5 },
+      { n: 7, name: 'Terrace', area: 82, x: 66.7, y: 15.4 },
+      { n: 8, name: 'Lounge', area: 38, x: 51.7, y: 53.2 },
+    ],
+  },
+];
