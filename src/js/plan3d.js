@@ -23,7 +23,7 @@ const spherical = (az, el, r) => new THREE.Vector3(Math.sin(az * deg) * Math.cos
 const smooth = (t) => { const x = Math.min(Math.max(t, 0), 1); return x * x * (3 - 2 * x); };
 
 export function initPlan3d({ stage, canvasHost, plots, phone, onStamp, onHover, onSelect, onFrame }) {
-  const state = { az: REDUCED ? 0 : -TURN, el: VIEW.model.el, zoom: 1, build: REDUCED ? 1 : 0, sunAz: SUN.midday.az, sunEl: SUN.midday.el };
+  const state = { az: REDUCED ? 0 : -TURN, el: VIEW.model.el, zoom: 1, build: REDUCED ? 1 : 0, sunAz: SUN.midday.az, sunEl: SUN.midday.el, tx: 0, tz: 0 };
   let needs = true, dragging = false, touched = false, view = 'model', hovered = null, selected = null;
 
   // ---- renderer, scene, camera, light
@@ -98,7 +98,7 @@ export function initPlan3d({ stage, canvasHost, plots, phone, onStamp, onHover, 
 
   // ---- camera framing: fit the site (and the tallest block) for a view, at the extremes of the turntable
   const corners = GEO.site.flatMap(([x, y]) => [new THREE.Vector3(x, 0, y), new THREE.Vector3(x, H.house, y)]);
-  const place = () => { camera.position.copy(spherical(state.az, state.el, 900)); camera.lookAt(0, 0, 0); camera.zoom = state.zoom; camera.updateProjectionMatrix(); camera.updateMatrixWorld(true); };
+  const place = () => { camera.position.copy(spherical(state.az, state.el, 900)).add(new THREE.Vector3(state.tx, 0, state.tz)); camera.lookAt(state.tx, 0, state.tz); camera.zoom = state.zoom; camera.updateProjectionMatrix(); camera.updateMatrixWorld(true); };
   const fitFor = (el, azs) => {
     const keep = { ...state }; let z = Infinity;
     azs.forEach((az) => {
@@ -199,11 +199,13 @@ export function initPlan3d({ stage, canvasHost, plots, phone, onStamp, onHover, 
   el.addEventListener('pointerup', end); el.addEventListener('pointercancel', () => { down = null; dragging = false; });
   el.addEventListener('pointerleave', () => { if (!down) hover(null); });
 
-  stage._plan = { state, houses };   // QA hook
+  const look = (v) => { Object.assign(state, v); build(1); light(); dirty(); };   // capture hook: frame a part of the estate
+  stage._plan = { state, houses, look };   // QA hook
   return {
     setView, setSun, select, hover,
     unlock() { unlocked = true; el.style.touchAction = 'none'; },
     lock() { unlocked = false; el.style.touchAction = ''; },
     refresh: dirty,
+    look,
   };
 }
