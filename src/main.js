@@ -16,6 +16,7 @@ import './styles/villa.css';
 import './styles/amen.css';
 import './styles/space.css';
 import './styles/arch.css';
+import './styles/dev.css';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './js/eases.js';
@@ -37,6 +38,7 @@ import { initVilla } from './js/villa.js';
 import { initAmen } from './js/amen.js';
 import { initSpace } from './js/space.js';
 import { initArch } from './js/arch.js';
+import { initDev } from './js/dev.js';
 
 window.lenis = lenis;          // QA hook
 lockScroll();                  // the cover holds the page until the lift
@@ -60,6 +62,7 @@ fontsReady().then(() => {
       initAmen();
       initSpace();
       initArch();
+      initDev();
       ScrollTrigger.refresh();   // the concept area grows during these inits; every trigger measures against the final layout
     },
   });
