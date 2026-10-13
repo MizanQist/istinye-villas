@@ -1,5 +1,5 @@
 /* section 12 — the closing statement: the brochure's last line over the golden-hour street, with the ring that books a viewing */
-.closing { position: relative; background: var(--night); color: var(--cream); overflow: clip; }
+.closing { position: relative; background: var(--night-deep); color: var(--cream); overflow: clip; }
 .closing__clip { position: relative; }
 .closing__stage { position: relative; min-height: 100svh; aspect-ratio: 144 / 150; display: grid; grid-template-rows: auto 1fr auto; align-items: center; justify-items: center; padding: 16svh var(--margin) 14svh; text-align: center; }
 .closing__media { position: absolute; inset: -12% 0; z-index: 0; will-change: transform; }

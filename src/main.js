@@ -18,6 +18,7 @@ import './styles/space.css';
 import './styles/arch.css';
 import './styles/dev.css';
 import './styles/closing.css';
+import './styles/footer.css';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './js/eases.js';
@@ -41,6 +42,7 @@ import { initSpace } from './js/space.js';
 import { initArch } from './js/arch.js';
 import { initDev } from './js/dev.js';
 import { initClosing } from './js/closing.js';
+import { initFooter } from './js/footer.js';
 
 window.lenis = lenis;          // QA hook
 lockScroll();                  // the cover holds the page until the lift
@@ -66,6 +68,7 @@ fontsReady().then(() => {
       initArch();
       initDev();
       initClosing();
+      initFooter();
       ScrollTrigger.refresh();   // the concept area grows during these inits; every trigger measures against the final layout
     },
   });
